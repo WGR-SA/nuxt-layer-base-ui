@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-layer-wi-kit",
+  "name": "@wgr-sa/nuxt-layer-base-ui",
   "type": "module",
   "version": "0.0.1",
   "main": "./nuxt.config.ts",

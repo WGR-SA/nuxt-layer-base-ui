@@ -7,5 +7,8 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 export default defineNuxtConfig({
   css: [
     join(currentDir, './assets/scss/main.scss')
+  ],
+  modules: [
+    '@wgr-sa/nuxt-form'
   ]
 })

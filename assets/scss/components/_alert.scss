@@ -1,0 +1,14 @@
+.alert {
+  --background: var(--color-text);
+  --color: var(--color-background);
+  --border: 0px;
+  --border-radius: 0px;
+  --padding: 0.5rem 1rem;
+
+  margin: 0.5rem 0 1rem;
+  padding: var(--padding);
+  background: var(--background);
+  color: var(--color);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}

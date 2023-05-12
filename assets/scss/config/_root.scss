@@ -1,0 +1,61 @@
+// Vars
+:root {
+
+  --c-black: #000000;
+  --c-white: #FFFFFF;
+  --c-grey: #CDCDCD;
+
+  --spacer-1: 1rem;
+  --spacer-2: calc(var(--spacer-1) * 2);
+  --spacer-3: calc(var(--spacer-1) * 3);
+  --spacer-4: calc(var(--spacer-1) * 4);
+
+  --font-default: sans-serif;
+  --font-heading: sans-serif;
+}
+
+:root {
+  --color-background: var(--c-white);
+  --color-heading: var(--c-black);
+  --color-text: var(--c-black);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--c-black);
+    --color-heading: var(--c-white);
+    --color-text: var(--c-white);
+  }
+}
+
+// Normalize-lite
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-default);
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+address {
+  font-style: normal;
+}

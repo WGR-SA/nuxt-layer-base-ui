@@ -1,0 +1,27 @@
+// Don't modifiy this file directly, apply this mixin to html tag or class
+@mixin input {
+  --background: var(--c-white);
+  --color: var(--c-black);
+  --border: 1px solid var(--c-grey);
+  --border-radius: 0.25rem;
+
+  display: block;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color);
+  background-color: var(--background);
+  background-clip: padding-box;
+  border: var(--border);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: var(--border-radius);
+}
+
+input,
+textarea {
+  @include input;
+}

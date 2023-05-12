@@ -1,0 +1,29 @@
+// Don't modifiy this file directly, apply this mixin to html tag or class
+@mixin details {
+  --background-summary: grey;
+  --background-article: white;
+  --padding: 1rem;
+
+  summary {
+    padding: var(--padding);
+    background: var(--background-summary);
+    cursor: pointer;
+  }
+
+  article {
+    padding: var(--padding);
+    background: var(--background-body);
+
+    >*:first-child {
+      margin-top: 0;
+    }
+
+    >*:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+details {
+  @include details;
+}

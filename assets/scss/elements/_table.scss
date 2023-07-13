@@ -1,0 +1,30 @@
+@mixin table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+
+  td {
+    padding: 0.5rem 0.65rem;
+    border-bottom: 1px solid var(--c-grey-light);
+  }
+
+  th {
+    padding: 0.5rem 0.65rem;
+    border-bottom: 3px solid var(--c-grey-light);
+    text-align: left;
+  }
+
+  button {
+    margin: 0;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.85rem;
+  }
+
+  button+button {
+    margin-left: 0.5rem;
+  }
+}
+
+table {
+  @include table;
+}

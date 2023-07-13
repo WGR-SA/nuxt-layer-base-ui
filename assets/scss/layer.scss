@@ -5,19 +5,25 @@
 @import 'config/_animations';
 
 // Elements 
+@import 'elements/_label';
+@import 'elements/_list';
+@import 'elements/_nav';
+@import 'elements/_input';
+@import 'elements/_select';
+@import 'elements/_table';
+@import 'elements/_menu';
 @import 'elements/_button';
 @import 'elements/_details';
-@import 'elements/_input';
+
 
 // Components
 @import 'components/_header';
 @import 'components/_footer';
 @import 'components/_section';
 @import 'components/_article';
+@import 'components/_alert';
+@import 'components/_card';
 
 // Layouts
 @import 'layout/_default';
-
-
-
-
+@import 'layout/_demo';

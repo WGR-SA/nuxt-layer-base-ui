@@ -3,25 +3,71 @@
   --background: var(--c-white);
   --color: var(--c-black);
   --border: 1px solid var(--c-grey);
-  --border-radius: 0.25rem;
+  --border-radius: var(--element-radius);
 
   display: block;
   width: 100%;
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem .75rem;
+  margin: 0 0 1rem;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1;
   color: var(--color);
   background-color: var(--background);
   background-clip: padding-box;
   border: var(--border);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // appearance: none;
   border-radius: var(--border-radius);
+
+  &[type="checkbox"],
+  &[type="radio"],
+  &[type="range"] {
+    display: inline-block;
+    width: auto;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+
+    &+label {
+      display: inline-block;
+      width: auto;
+      margin: 0 0 1rem 0.5rem;
+      vertical-align: top;
+      cursor: pointer;
+    }
+  }
+
+  &[disabled] {
+    background: #e1e1e1;
+    color: #898989;
+  }
+
+
+  &--error, .form__error {
+    border-color: var(--color-error);
+  }
+
 }
 
 input,
-textarea {
+.input,
+textarea,
+.textarea {
   @include input;
+
+  font-family: var(--font-default) !important;
+
+  // input error
+  &+p:has(small) {
+    transform: translateY(-0.75rem);
+    margin: 0 0 0.25rem 0.1rem;
+    color: var(--color-error);
+  }
+}
+
+textarea {
+
+  --border-radius: var(--component-radius);
+  line-height: 1.5rem;
 }

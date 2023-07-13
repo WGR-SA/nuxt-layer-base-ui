@@ -1,14 +1,35 @@
 .alert {
-  --background: var(--color-text);
-  --color: var(--color-background);
+  --background: var(--c-grey-light);
+  --color: var(--color-text);
   --border: 0px;
-  --border-radius: 0px;
-  --padding: 0.5rem 1rem;
+  --border-radius: var(--component-radius);
+  --padding: 1rem;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
   margin: 0.5rem 0 1rem;
   padding: var(--padding);
   background: var(--background);
   color: var(--color);
   border: var(--border);
   border-radius: var(--border-radius);
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    vertical-align: middle;
+  }
+
+  .icon {
+    --color: var(--color);
+    font-size: 1rem;
+    margin: 0 0.5rem 0 0;
+  }
+  
+  svg {
+    cursor: pointer;
+  }
 }

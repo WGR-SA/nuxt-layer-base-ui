@@ -1,14 +1,25 @@
 export default defineAppConfig({
-  myLayer: {
-    name: 'Hello from Nuxt layer'
+  baseUi: {
+    name: 'WGR SA - Base UI Layer',
+    icons: {
+      success: '✅',
+      error: '⛔',
+      warning: '⚠',
+      info: '🆗'
+    }
   }
 })
 
 declare module '@nuxt/schema' {
   interface AppConfigInput {
-    myLayer?: {
-      /** Project name */
-      name?: string
+    baseUi?: {
+      name?: string,
+      icons?: {
+        success?: string,
+        error?: string,
+        warning?: string,
+        info?: string,
+      }
     }
   }
 }

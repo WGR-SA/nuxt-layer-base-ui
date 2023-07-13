@@ -1,0 +1,25 @@
+menu {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    a {
+      color: var(--color-text);
+    }
+
+    &.active {
+      padding: 0 0.15rem;
+      border-bottom: 1px solid var(--c-blue);
+
+      a {
+        color: var(--c-blue);
+      }
+    }
+  }
+}

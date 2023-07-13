@@ -1,0 +1,9 @@
+ul,
+ol {
+  margin: 0 0 1rem;
+  padding: 0 1.2rem 0;
+
+  li {
+    @include p();
+  }
+}

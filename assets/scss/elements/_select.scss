@@ -1,0 +1,7 @@
+select {
+  @include input;
+
+  &[multiple] {
+      --border-radius: var(--component-radius);
+    }
+}

@@ -1,7 +1,8 @@
 {
   "name": "@wgr-sa/nuxt-layer-base-ui",
+  "description": "Nuxt Layer Base UI",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./nuxt.config.ts",
   "scripts": {
     "dev": "nuxi dev .playground",
@@ -14,10 +15,12 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
     "eslint": "^8.28.0",
-    "nuxt": "^3.0.0",
+    "nuxt": "^3.6.2",
+    "sass": "^1.63.6",
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "@wgr-sa/wi-kit": "^0.0.5"
+    "@wgr-sa/nuxt-form": "^0.6.1",
+    "@wgr-sa/wi-kit": "^0.1.0"
   }
 }

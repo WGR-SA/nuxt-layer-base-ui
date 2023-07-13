@@ -1,38 +1,64 @@
 // Vars
 :root {
-
-  --c-black: #000000;
-  --c-white: #FFFFFF;
-  --c-grey: #CDCDCD;
+  --c-black: #232323;
+  --c-black-text: #454545;
+  --c-white: #FEFEFE;
+  --c-grey-light: #F6F6F7;
+  --c-grey: #D8D8D8;
+  --c-blue: #0099E5;
+  --c-green: #65D680;
+  --c-orange: #F9B63E;
+  --c-red: #FC5959;
+  --c-violet: #7B5FFD;
 
   --spacer-1: 1rem;
   --spacer-2: calc(var(--spacer-1) * 2);
   --spacer-3: calc(var(--spacer-1) * 3);
   --spacer-4: calc(var(--spacer-1) * 4);
 
-  --font-default: sans-serif;
-  --font-heading: sans-serif;
+  --font-default: 'Inter', sans-serif;
+  --font-heading: 'Inter', sans-serif;
 }
 
+// Theme
 :root {
+  --color-primary: var(--c-blue);
+  --color-secondary: var(--c-grey);
+  --color-success: var(--c-green);
+  --color-warning: var(--c-orange);
+  --color-error: var(--c-red);
+  --color-help: var(--c-violet);
+  --color-info: var(--color-primary);
+  --color-default: var(--c-black-text);
+
   --color-background: var(--c-white);
   --color-heading: var(--c-black);
-  --color-text: var(--c-black);
+  --color-text: var(--c-black-text);
+
+  --element-radius: 5rem;
+  --component-radius: 0.5rem;
+
+  --element-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.035);
+  --component-shadow: 0 0 1rem rgba(0, 0, 0, 0.01);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--c-black);
-    --color-heading: var(--c-white);
-    --color-text: var(--c-white);
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --color-background: var(--c-black);
+//     --color-heading: var(--c-white);
+//     --color-text: var(--c-white);
+//   }
+// }
 
 // Normalize-lite
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -47,8 +73,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
 }
 
 b,
@@ -58,4 +95,26 @@ strong {
 
 address {
   font-style: normal;
+}
+
+hr {
+  margin: var(--spacer-2) 0;
+  border: 1px solid var(--c-grey-light);
+}
+
+figure {
+  margin: 0;
+
+  img {
+    border-radius: var(--component-radius);
+  }
+}
+
+.icon {
+  --color: var(--c-white);
+
+  font-family: "GT Maru Emoji Color";
+  font-size: inherit;
+  color: var(--color);
+  vertical-align: middle;
 }

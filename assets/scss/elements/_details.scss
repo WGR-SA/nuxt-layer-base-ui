@@ -1,12 +1,16 @@
 // Don't modifiy this file directly, apply this mixin to html tag or class
 @mixin details {
-  --background-summary: grey;
+  --background-summary: var(--color-text);
   --background-article: white;
-  --padding: 1rem;
+  --padding: 1rem 1.2rem;
+  --radius: var(--component-radius);
 
   summary {
+    font-size: 0.9rem;
     padding: var(--padding);
     background: var(--background-summary);
+    border-radius: var(--radius);
+    color: var(--color-background);
     cursor: pointer;
   }
 
